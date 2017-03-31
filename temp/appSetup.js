@@ -23,7 +23,7 @@ function loadScript(url, callback) {
 }
 
 var scriptsLoaded = 0;
-var totalScripts = 5;
+var totalScripts = 4;
 (function init() {
     var domain = "https://cdn.rawgit.com/stajima/ng-admin/c82c5030";
 
@@ -49,11 +49,6 @@ var totalScripts = 5;
     });
     loadScript(domain + '/node_modules/systemjs/dist/system.src.js', function () {
         console.log('systemjs loaded');
-        scriptsLoaded++;
-        launch();
-    });
-    loadScript('https://cdn.rawgit.com/stajima/ng-admin/b2188d2e/tsconfig.json', function () {
-        console.log('tsconfig loaded');
         scriptsLoaded++;
         launch();
     });
