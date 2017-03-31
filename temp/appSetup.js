@@ -57,6 +57,5 @@ var launch = function () {
             System.import('app').catch(console.error.bind(console));
             // System.import('app').catch(console.error.bind(console));
         });
-
     }
 };
