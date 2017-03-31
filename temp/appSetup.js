@@ -53,7 +53,7 @@ var totalScripts = 5;
         launch();
     });
     loadScript('https://cdn.rawgit.com/stajima/ng-admin/b2188d2e/tsconfig.json', function () {
-        console.log('systemjs loaded');
+        console.log('tsconfig loaded');
         scriptsLoaded++;
         launch();
     });
