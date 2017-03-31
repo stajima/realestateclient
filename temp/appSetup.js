@@ -47,11 +47,6 @@ var totalScripts = 4;
         scriptsLoaded++;
         launch();
     });
-    loadScript(domain + '/node_modules/systemjs/dist/system.src.js', function () {
-        console.log('systemjs loaded');
-        scriptsLoaded++;
-        launch();
-    });
 }());
 
 var launch = function () {
