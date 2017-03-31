@@ -23,9 +23,9 @@ function loadScript(url, callback) {
 }
 
 var scriptsLoaded = 0;
-var totalScripts = 4;
+var totalScripts = 5;
 (function init() {
-    var domain = "https://rawgit.com/stajima/ng-admin/master";
+    var domain = "https://cdn.rawgit.com/stajima/ng-admin/c82c5030";
 
     loadScript(domain + '/node_modules/core-js/client/shim.min.js', function () {
         console.log('shim loaded');
@@ -43,6 +43,16 @@ var totalScripts = 4;
         launch();
     });
     loadScript(domain + '/node_modules/systemjs/dist/system.src.js', function () {
+        console.log('systemjs loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/node_modules/systemjs/dist/system.src.js', function () {
+        console.log('systemjs loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/tsconfig.js', function () {
         console.log('systemjs loaded');
         scriptsLoaded++;
         launch();
