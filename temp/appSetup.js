@@ -51,11 +51,10 @@ var totalScripts = 4;
 
 var launch = function () {
     if (scriptsLoaded === totalScripts) {
-        loadScript('https://raw.githubusercontent.com/stajima/ng-admin/master/systemjs.config.js', function () {
+        loadScript('https://rawgit.com/stajima/ng-admin/master/systemjs.config.js', function () {
             console.log('config.js loaded');
             console.log('Launching app');
             System.import('app').catch(console.error.bind(console));
-            // System.import('app').catch(console.error.bind(console));
         });
     }
 };
