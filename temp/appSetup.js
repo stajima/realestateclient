@@ -25,7 +25,7 @@ function loadScript(url, callback) {
 var scriptsLoaded = 0;
 var totalScripts = 4;
 (function init() {
-    var domain = "https://rawgit.com/stajima/ng-admin/master";
+    var domain = "https://rawgit.com/stajima/ng-admin/master/src";
 
     loadScript(domain + '/node_modules/core-js/client/shim.min.js', function () {
         console.log('shim loaded');
