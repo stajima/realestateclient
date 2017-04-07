@@ -9,10 +9,10 @@ var scriptsLoaded = 0;
 var totalScripts = 14;
 var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 (function init() {
-    loadScript(domain + '/polyfills.dll.js');
-    loadScript(domain + '/vendor.dll.js');
-    loadScript(domain + '/polyfills.bundle.js');
-    loadScript(domain + '/vendor.bundle.js');
+    // loadScript(domain + '/polyfills.dll.js');
+    // loadScript(domain + '/vendor.dll.js');
+    // loadScript(domain + '/polyfills.bundle.js');
+    // loadScript(domain + '/vendor.bundle.js');
     loadScript(domain + '/0.chunk.js');
     loadScript(domain + '/1.chunk.js');
     loadScript(domain + '/2.chunk.js');
