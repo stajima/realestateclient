@@ -1,7 +1,4 @@
-function gotApp() {
-    console.log("loader complete");
-}
-
+console.log('loader.js')
 var scriptElement = document.createElement("script");
 scriptElement.src = "https://code.jquery.com/jquery-3.2.1.min.js";
 document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));

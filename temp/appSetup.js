@@ -1,4 +1,4 @@
-console.log('Start of appSetup.js');
+console.log('appSetup.js');
 function loadScript(url) {
     var scriptElement = document.createElement("script");
     scriptElement.src = url;
