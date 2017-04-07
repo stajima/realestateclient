@@ -69,10 +69,10 @@ function loadChunks() {
     }
 };
 
-(function init() {
+function init() {
     loadPolyDll();
     loadVendorDll();
-})();
+};
 
 function loadPolyDll() {
     loadScript(domain + '/polyfills.dll.js', function () {
