@@ -5,5 +5,5 @@ document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loade
 
 var scriptElement = document.createElement("script");
 scriptElement.src = "https://stajima.github.io/realestateclient/temp/appSetup.js";
-scriptElement.onload = gotApp;
+// scriptElement.onload = gotApp;
 document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
