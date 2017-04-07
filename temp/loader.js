@@ -1,5 +1,5 @@
 function gotApp() {
-    console.log("got app");
+    console.log("loader complete");
 }
 
 var scriptElement = document.createElement("script");
