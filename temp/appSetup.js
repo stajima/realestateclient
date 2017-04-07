@@ -69,11 +69,6 @@ function loadChunks() {
     }
 };
 
-function init() {
-    loadPolyDll();
-    loadVendorDll();
-};
-
 function loadPolyDll() {
     loadScript(domain + '/polyfills.dll.js', function () {
         console.log('polyfills dll loaded');
@@ -112,3 +107,8 @@ function loadMain() {
         console.log('main bundle added');
     }
 };
+
+$(document).ready(function init() {
+    loadPolyDll();
+    loadVendorDll();
+});
