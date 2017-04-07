@@ -127,5 +127,6 @@ function loadMain() {
         scriptElement.src = (domain + '/main.bundle.js');
         scriptElement.defer;
         document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
+        console.log('main bundle added');
     }
 };
