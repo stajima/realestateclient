@@ -27,6 +27,6 @@ var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 
 var launch = function () {
     if (scriptsLoaded === totalScripts) {
-        loadScript(domain + '/main.bundle.js');
+        // loadScript(domain + '/main.bundle.js');
     }
 };
