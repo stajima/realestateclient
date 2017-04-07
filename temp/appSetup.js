@@ -109,6 +109,9 @@ function loadMain() {
 };
 
 $(document).ready(function init() {
+    var scriptElement = document.createElement("link");
+    scriptElement.rel = "stylesheet";
+    scriptElement.href = "https://rawgit.com/stajima/ng-admin/master/dist/initial.css";
     loadPolyDll();
     loadVendorDll();
 });
