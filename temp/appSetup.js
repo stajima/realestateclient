@@ -23,27 +23,76 @@ function loadScript(url, callback) {
 }
 
 var scriptsLoaded = 0;
-var totalScripts = 4;
+var totalScripts = 13;
+var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 (function init() {
-    var domain = "https://rawgit.com/stajima/ng-admin/master";
-
-    loadScript(domain + '/node_modules/core-js/client/shim.min.js', function () {
-        console.log('shim loaded');
+    loadScript(domain + '/polyfills.dll.js', function () {
+        console.log('polyfills dll loaded');
         scriptsLoaded++;
         launch();
     });
-    loadScript(domain + '/node_modules/zone.js/dist/zone.js', function () {
-        console.log('zone loaded');
+    loadScript(domain + '/vendor.dll.js', function () {
+        console.log('vendor dll loaded');
         scriptsLoaded++;
         launch();
     });
-    loadScript(domain + '/node_modules/reflect-metadata/Reflect.js', function () {
-        console.log('reflect loaded');
+    loadScript(domain + '/polyfills.bundle.js', function () {
+        console.log('ployfills bundle loaded');
         scriptsLoaded++;
         launch();
     });
-    loadScript(domain + '/node_modules/systemjs/dist/system.src.js', function () {
-        console.log('systemjs loaded');
+    loadScript(domain + '/vendor.bundle.js', function () {
+        console.log('vendor bundle loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/0.chunk.js', function () {
+        console.log('chunk 0 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/1.chunk.js', function () {
+        console.log('chunk 1 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/2.chunk.js', function () {
+        console.log('chunk 2 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/3.chunk.js', function () {
+        console.log('chunk 3 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/4.chunk.js', function () {
+        console.log('chunk 4 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/5.chunk.js', function () {
+        console.log('chunk 5 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/6.chunk.js', function () {
+        console.log('chunk 6 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/7.chunk.js', function () {
+        console.log('chunk 7 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/8.chunk.js', function () {
+        console.log('chunk 8 loaded');
+        scriptsLoaded++;
+        launch();
+    });
+    loadScript(domain + '/9.chunk.js', function () {
+        console.log('chunk 9 loaded');
         scriptsLoaded++;
         launch();
     });
@@ -51,10 +100,8 @@ var totalScripts = 4;
 
 var launch = function () {
     if (scriptsLoaded === totalScripts) {
-        loadScript('https://rawgit.com/stajima/ng-admin/master/src/systemjs.config.js', function () {
-            console.log('config.js loaded');
+        loadScript(domain + '/main.bundle.js', function () {
             console.log('Launching app');
-            System.import('app').catch(console.error.bind(console));
         });
     }
 };
