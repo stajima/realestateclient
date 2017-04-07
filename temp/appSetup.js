@@ -1,4 +1,5 @@
 console.log('appSetup.js');
+//TODO change to use loader style load with all async. test on index first.
 function loadScript(url, callback) {
 
     var script = document.createElement("script");
