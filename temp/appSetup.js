@@ -120,8 +120,12 @@ function loadVendorBundle() {
 
 function loadMain() {
     if (scriptsLoaded === totalScripts) {
-        loadScript(domain + '/main.bundle.js', function () {
-            console.log('main bundle loaded');
-        });
+        // loadScript(domain + '/main.bundle.js', function () {
+        //     console.log('main bundle loaded');
+        // });
+        var scriptElement = document.createElement("script");
+        scriptElement.src = (domain + '/main.bundle.js');
+        scriptElement.defer;
+        document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
     }
 };
