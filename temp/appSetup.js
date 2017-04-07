@@ -23,29 +23,29 @@ function loadScript(url, callback) {
 }
 
 var scriptsLoaded = 0;
-var totalScripts = 13;
+var totalScripts = 10;
 var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 (function init() {
-    loadScript(domain + '/polyfills.dll.js', function () {
-        console.log('polyfills dll loaded');
-        scriptsLoaded++;
-        launch();
-    });
-    loadScript(domain + '/vendor.dll.js', function () {
-        console.log('vendor dll loaded');
-        scriptsLoaded++;
-        launch();
-    });
-    loadScript(domain + '/polyfills.bundle.js', function () {
-        console.log('ployfills bundle loaded');
-        scriptsLoaded++;
-        launch();
-    });
-    loadScript(domain + '/vendor.bundle.js', function () {
-        console.log('vendor bundle loaded');
-        scriptsLoaded++;
-        launch();
-    });
+    // loadScript(domain + '/polyfills.dll.js', function () {
+    //     console.log('polyfills dll loaded');
+    //     scriptsLoaded++;
+    //     launch();
+    // });
+    // loadScript(domain + '/vendor.dll.js', function () {
+    //     console.log('vendor dll loaded');
+    //     scriptsLoaded++;
+    //     launch();
+    // });
+    // loadScript(domain + '/polyfills.bundle.js', function () {
+    //     console.log('ployfills bundle loaded');
+    //     scriptsLoaded++;
+    //     launch();
+    // });
+    // loadScript(domain + '/vendor.bundle.js', function () {
+    //     console.log('vendor bundle loaded');
+    //     scriptsLoaded++;
+    //     launch();
+    // });
     loadScript(domain + '/0.chunk.js', function () {
         console.log('chunk 0 loaded');
         scriptsLoaded++;
