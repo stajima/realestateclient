@@ -6,7 +6,7 @@ function loadScript(url, callback) {
     if (callback) {
         scriptElement.onload = callback;
     }
-    document.head.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
+    document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
 }
 
 var chunksLoaded = 0;
@@ -108,7 +108,7 @@ function loadMain() {
     if (chunksLoaded === totalChunks) {
         var scriptElement = document.createElement("script");
         scriptElement.src = (domain + '/main.bundle.js');
-        document.head.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
+        document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
         console.log('main bundle added');
     }
 };
