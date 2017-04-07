@@ -2,6 +2,7 @@ console.log('appSetup.js');
 //TODO change to use loader style load
 function loadScript(url, callback) {
     var scriptElement = document.createElement("script");
+    scriptElement.type = "text/javascript";
     scriptElement.src = url;
     if (callback) {
         scriptElement.onload = callback;
