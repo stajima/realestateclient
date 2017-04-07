@@ -32,52 +32,52 @@ function scripts() {
         loadScript(domain + '/0.chunk.js', function () {
             console.log('chunk 0 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/1.chunk.js', function () {
             console.log('chunk 1 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/2.chunk.js', function () {
             console.log('chunk 2 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/3.chunk.js', function () {
             console.log('chunk 3 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/4.chunk.js', function () {
             console.log('chunk 4 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/5.chunk.js', function () {
             console.log('chunk 5 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/6.chunk.js', function () {
             console.log('chunk 6 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/7.chunk.js', function () {
             console.log('chunk 7 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/8.chunk.js', function () {
             console.log('chunk 8 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
         loadScript(domain + '/9.chunk.js', function () {
             console.log('chunk 9 loaded');
             scriptsLoaded++;
-            launch();
+            loadMain();
         });
     }
 };
