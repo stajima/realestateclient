@@ -3,12 +3,14 @@ console.log('appSetup.js');
 function loadScript(url, callback) {
     var scriptElement = document.createElement("script");
     scriptElement.src = url;
-    scriptElement.onload = callback || null;
+    if (callback) {
+        scriptElement.onload = callback;
+    }
     document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
 }
 
-var scriptsLoaded = 0;
-var totalScripts = 10;
+var chunksLoaded = 0;
+var totalChunks = 10;
 var vendorDone = false;
 var polyDone = false;
 var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
@@ -16,52 +18,52 @@ function loadChunks() {
     if (vendorDone && polyDone) {
         loadScript(domain + '/0.chunk.js', function () {
             console.log('chunk 0 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/1.chunk.js', function () {
             console.log('chunk 1 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/2.chunk.js', function () {
             console.log('chunk 2 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/3.chunk.js', function () {
             console.log('chunk 3 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/4.chunk.js', function () {
             console.log('chunk 4 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/5.chunk.js', function () {
             console.log('chunk 5 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/6.chunk.js', function () {
             console.log('chunk 6 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/7.chunk.js', function () {
             console.log('chunk 7 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/8.chunk.js', function () {
             console.log('chunk 8 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
         loadScript(domain + '/9.chunk.js', function () {
             console.log('chunk 9 loaded');
-            scriptsLoaded++;
+            chunksLoaded++;
             loadMain();
         });
     }
@@ -103,10 +105,7 @@ function loadVendorBundle() {
 };
 
 function loadMain() {
-    if (scriptsLoaded === totalScripts) {
-        // loadScript(domain + '/main.bundle.js', function () {
-        //     console.log('main bundle loaded');
-        // });
+    if (chunksLoaded === totalChunks) {
         var scriptElement = document.createElement("script");
         scriptElement.src = (domain + '/main.bundle.js');
         document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
