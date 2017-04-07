@@ -12,7 +12,7 @@ var totalScripts = 10;
 var vendorDone = false;
 var polyDone = false;
 var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
-function scripts() {
+function loadChunks() {
     if (vendorDone && polyDone) {
         loadScript(domain + '/0.chunk.js', function () {
             console.log('chunk 0 loaded');
@@ -83,7 +83,7 @@ function loadPolyBundle() {
     loadScript(domain + '/polyfills.bundle.js', function () {
         console.log('ployfills bundle loaded');
         polyDone = true;
-        scripts();
+        loadChunks();
     });
 };
 
@@ -98,7 +98,7 @@ function loadVendorBundle() {
     loadScript(domain + '/vendor.bundle.js', function () {
         console.log('vendor bundle loaded');
         vendorDone = true;
-        scripts();
+        loadChunks();
     });
 };
 
@@ -109,7 +109,6 @@ function loadMain() {
         // });
         var scriptElement = document.createElement("script");
         scriptElement.src = (domain + '/main.bundle.js');
-        scriptElement.defer = true;
         document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
         console.log('main bundle added');
     }
