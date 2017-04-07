@@ -112,6 +112,7 @@ $(document).ready(function init() {
     var scriptElement = document.createElement("link");
     scriptElement.rel = "stylesheet";
     scriptElement.href = "https://rawgit.com/stajima/ng-admin/master/dist/initial.css";
+    document.getElementsByTagName('head')[0].appendChild(scriptElement);
     loadPolyDll();
     loadVendorDll();
 });
