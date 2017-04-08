@@ -20,7 +20,7 @@ $(document).ready(function init() {
     var vendorDone = false;
     var polyDone = false;
     var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
-
+    console.log(domain);
     function loadChunks() {
         if (vendorDone && polyDone) {
             ramidx4.loadScript(domain + '/0.chunk.js', function () {
@@ -77,7 +77,8 @@ $(document).ready(function init() {
     };
 
     function loadPolyDll() {
-        ramidx4.loadScript((domain + '/polyfills.dll.js'), function () {
+        console.log(domain + '/polyfills.dll.js);
+        ramidx4.loadScript(domain + '/polyfills.dll.js', function () {
             console.log('polyfills dll loaded');
             loadPolyBundle();
         });
