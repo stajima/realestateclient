@@ -19,8 +19,8 @@ $(document).ready(function init() {
     var polyDone = false;
     var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 
-    loadPolyDll();
     loadVendorDll();
+    loadPolyDll();
 
     function loadChunks() {
         if (vendorDone && polyDone) {

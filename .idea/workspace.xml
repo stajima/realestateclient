@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="807b3aee-984d-4cf5-a91a-c33b94cc754f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="807b3aee-984d-4cf5-a91a-c33b94cc754f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -43,10 +41,13 @@
       <file leaf-file-name="appSetup.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/temp/appSetup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
-                <element signature="e#927#2902#0" expanded="false" />
+                <element signature="e#904#2879#0" expanded="false" />
+                <element signature="e#3111#3311#0" expanded="false" />
+                <element signature="e#3543#3739#0" expanded="false" />
+                <element signature="e#3766#4099#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -246,12 +247,12 @@
       <workItem from="1490998840884" duration="6349000" />
       <workItem from="1491349454101" duration="199000" />
       <workItem from="1491429651454" duration="17738000" />
-      <workItem from="1491592544669" duration="13444000" />
+      <workItem from="1491592544669" duration="13642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37730000" />
+    <option name="totallyTimeSpent" value="37928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -319,7 +320,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#927#2902#0" expanded="false" />
+            <element signature="e#904#2879#0" expanded="false" />
+            <element signature="e#3111#3311#0" expanded="false" />
+            <element signature="e#3543#3739#0" expanded="false" />
+            <element signature="e#3766#4099#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -337,7 +341,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#927#2902#0" expanded="false" />
+            <element signature="e#904#2879#0" expanded="false" />
+            <element signature="e#3111#3311#0" expanded="false" />
+            <element signature="e#3543#3739#0" expanded="false" />
+            <element signature="e#3766#4099#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -363,10 +370,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/appSetup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
-            <element signature="e#927#2902#0" expanded="false" />
+            <element signature="e#904#2879#0" expanded="false" />
+            <element signature="e#3111#3311#0" expanded="false" />
+            <element signature="e#3543#3739#0" expanded="false" />
+            <element signature="e#3766#4099#0" expanded="false" />
           </folding>
         </state>
       </provider>
