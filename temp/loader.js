@@ -1,5 +1,5 @@
 console.log('loader.js')
-this.loadScript = function (url, callback) {
+ramidx4.loadScript = function (url, callback) {
     var script = document.createElement("script")
     script.type = "text/javascript";
     if (script.readyState) {  //IE
@@ -19,16 +19,8 @@ this.loadScript = function (url, callback) {
     document.body.insertBefore(script, document.getElementById("ramidx4_loader"));
 }
 
-loadScript("https://code.jquery.com/jquery-3.2.1.min.js", function () {
+ramidx4.loadScript("https://code.jquery.com/jquery-3.2.1.min.js", function () {
     var scriptElement = document.createElement("script");
     scriptElement.src = "https://stajima.github.io/realestateclient/temp/appSetup.js";
     document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
 });
-
-// var scriptElement = document.createElement("script");
-// scriptElement.src = "https://code.jquery.com/jquery-3.2.1.min.js";
-// document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
-
-// var scriptElement = document.createElement("script");
-// scriptElement.src = "https://stajima.github.io/realestateclient/temp/appSetup.js";
-// document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
