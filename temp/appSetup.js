@@ -12,15 +12,16 @@ $(document).ready(function init() {
     scriptElement.rel = "stylesheet";
     scriptElement.href = "https://rawgit.com/stajima/ng-admin/master/dist/initial.css";
     document.getElementsByTagName('head')[0].appendChild(scriptElement);
-    loadPolyDll();
-    loadVendorDll();
 
     var chunksLoaded = 0;
     var totalChunks = 10;
     var vendorDone = false;
     var polyDone = false;
     var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
-    console.log(domain);
+
+    loadPolyDll();
+    loadVendorDll();
+
     function loadChunks() {
         if (vendorDone && polyDone) {
             ramidx4.loadScript(domain + '/0.chunk.js', function () {
@@ -77,7 +78,6 @@ $(document).ready(function init() {
     };
 
     function loadPolyDll() {
-        console.log(domain + '/polyfills.dll.js);
         ramidx4.loadScript(domain + '/polyfills.dll.js', function () {
             console.log('polyfills dll loaded');
             loadPolyBundle();
