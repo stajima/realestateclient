@@ -1,5 +1,10 @@
+/**
+ * Dlls are loaded first and the their related bundles.
+ * Once both bundles are finished the chunks are loaded.
+ * Once are chunks are complete the main bundle is loaded.
+ * The main will kick off the app.
+ */
 console.log('appSetup.js');
-console.log(ramidx4);
 var chunksLoaded = 0;
 var totalChunks = 10;
 var vendorDone = false;
@@ -99,6 +104,10 @@ function loadMain() {
     }
 };
 
+/**
+ * When document is ready jquery will run the init function
+ * Init adds the initial stylesheet and then calls the Dll loaders
+ */
 $(document).ready(function init() {
     var scriptElement = document.createElement("link");
     scriptElement.rel = "stylesheet";
