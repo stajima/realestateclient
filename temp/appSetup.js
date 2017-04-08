@@ -77,7 +77,7 @@ $(document).ready(function init() {
     };
 
     function loadPolyDll() {
-        ramidx4.loadScript(domain + '/polyfills.dll.js', function () {
+        ramidx4.loadScript((domain + '/polyfills.dll.js'), function () {
             console.log('polyfills dll loaded');
             loadPolyBundle();
         });
