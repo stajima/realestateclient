@@ -31,5 +31,6 @@ ramidx4.loadScript = function (url, callback) {
 ramidx4.loadScript("https://code.jquery.com/jquery-3.2.1.min.js", function () {
     var scriptElement = document.createElement("script");
     scriptElement.src = "https://stajima.github.io/realestateclient/temp/appSetup.js";
-    document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
+    var parentNode = document.getElementById("ramidx4_loader").parentNode;
+    parentNode.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
 });
