@@ -21,7 +21,8 @@ ramidx4.loadScript = function (url, callback) {
     }
 
     script.src = url;
-    document.body.insertBefore(script, document.getElementById("ramidx4_loader"));
+    var parentNode = document.getElementById("ramidx4_loader").parentNode;
+    parentNode.insertBefore(script, document.getElementById("ramidx4_loader"));
 }
 
 /**
