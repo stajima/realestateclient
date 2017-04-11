@@ -111,7 +111,8 @@ $(document).ready(function init() {
         if (chunksLoaded === totalChunks) {
             var scriptElement = document.createElement("script");
             scriptElement.src = (domain + '/main.bundle.js');
-            document.body.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
+            var parentNode = document.getElementById("ramidx4_loader").parentNode;
+            parentNode.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
             console.log('main bundle added');
         }
     };
