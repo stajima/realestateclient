@@ -1,22 +1,43 @@
 console.log('appSetup.js');
 
-$(document).ready(function init() {
-    var scriptElement = document.createElement("link");
-    scriptElement.rel = "stylesheet";
-    scriptElement.href = "https://rawgit.com/stajima/ng-admin/master/dist/initial.css";
-    document.getElementsByTagName('head')[0].appendChild(scriptElement);
+$(document).ready(init());
 
+function init() {
     var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 
-    ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
-        console.log('ployfills bundle loaded');
-    });
+    var scriptElement = document.createElement("link");
+    scriptElement.rel = "stylesheet";
+    scriptElement.href = domain + "/initial.css";
+    document.getElementsByTagName('head')[0].appendChild(scriptElement);
 
-    ramidx4.loadScript(domain + '/vendor.bundle.js', function () {
-        console.log('vendor bundle loaded');
-    });
+    var polyDone = false;
+    var vendorDone = false;
 
-    ramidx4.loadScript(domain + '/main.bundle.js', function () {
-        console.log('main bundle added');
-    });
-});
+    loadPolyBundle();
+    loadVendorBundle();
+
+
+    function loadPolyBundle() {
+        ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
+            console.log('ployfills bundle loaded');
+            polyDone = true;
+            loadMain();
+        });
+    }
+
+    function loadVendorBundle() {
+        ramidx4.loadScript(domain + '/vendor.bundle.js', function () {
+            console.log('vendor bundle loaded');
+            vendorDone = true;
+            loadMain();
+        });
+    }
+
+    function loadMain() {
+        if (vendorDone && polyDone) {
+            ramidx4.loadScript(domain + '/main.bundle.js', function () {
+                console.log('main bundle added');
+            });
+        }
+    }
+}
