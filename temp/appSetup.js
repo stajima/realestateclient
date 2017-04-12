@@ -8,21 +8,15 @@ $(document).ready(function init() {
 
     var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 
-    function loadPolyBundle() {
-        ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
-            console.log('ployfills bundle loaded');
-        });
-    };
+    ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
+        console.log('ployfills bundle loaded');
+    });
 
-    function loadVendorBundle() {
-        ramidx4.loadScript(domain + '/vendor.bundle.js', function () {
-            console.log('vendor bundle loaded');
-        });
-    };
+    ramidx4.loadScript(domain + '/vendor.bundle.js', function () {
+        console.log('vendor bundle loaded');
+    });
 
-    function loadMain() {
-        ramidx4.loadScript(domain + '/main.bundle.js', function () {
-            console.log('main bundle added');
-        });
+    ramidx4.loadScript(domain + '/main.bundle.js', function () {
+        console.log('main bundle added');
     };
 });
