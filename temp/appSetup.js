@@ -18,5 +18,5 @@ $(document).ready(function init() {
 
     ramidx4.loadScript(domain + '/main.bundle.js', function () {
         console.log('main bundle added');
-    };
+    });
 });
