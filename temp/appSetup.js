@@ -25,4 +25,4 @@ var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
 parentNode.insertBefore(polyElement, document.getElementById("ramidx4_loader"));
 parentNode.insertBefore(vendorElement, document.getElementById("ramidx4_loader"));
-parentNode.insertBefore(mainElement, document.getElementById("ramidx4_loader"));
+// parentNode.insertBefore(mainElement, document.getElementById("ramidx4_loader"));
