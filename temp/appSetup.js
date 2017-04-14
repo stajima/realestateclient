@@ -14,14 +14,13 @@ function init() {
     var vendorDone = false;
 
     loadPolyBundle();
-    loadVendorBundle();
 
 
     function loadPolyBundle() {
         ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
             console.log('ployfills bundle loaded');
             polyDone = true;
-            loadMain();
+            loadVendorBundle();
         });
     }
 
