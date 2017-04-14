@@ -17,6 +17,7 @@ function init() {
 
 
     function loadPolyBundle() {
+        console.log('getting ployfills bundle');
         ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
             console.log('ployfills bundle loaded');
             polyDone = true;
@@ -25,6 +26,7 @@ function init() {
     }
 
     function loadVendorBundle() {
+        console.log('getting vendor bundle');
         ramidx4.loadScript(domain + '/vendor.bundle.js', function () {
             console.log('vendor bundle loaded');
             vendorDone = true;
@@ -33,6 +35,7 @@ function init() {
     }
 
     function loadMain() {
+        console.log('getting main bundle');
         if (vendorDone && polyDone) {
             ramidx4.loadScript(domain + '/main.bundle.js', function () {
                 console.log('main bundle added');
