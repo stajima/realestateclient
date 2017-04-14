@@ -1,45 +1,28 @@
 console.log('appSetup.js');
 
-$(document).ready(init());
+var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
 
-function init() {
-    var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
+var scriptElement = document.createElement("link");
+scriptElement.rel = "stylesheet";
+scriptElement.href = domain + "/initial.css";
+document.getElementsByTagName('head')[0].appendChild(scriptElement);
 
-    var scriptElement = document.createElement("link");
-    scriptElement.rel = "stylesheet";
-    scriptElement.href = domain + "/initial.css";
-    document.getElementsByTagName('head')[0].appendChild(scriptElement);
+var polyElement = document.createElement("script");
+polyElement.src = domain + '/polyfills.bundle.js';
+polyElement.defer = true;
+var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
-    var polyDone = false;
-    var vendorDone = false;
+var vendorElement = document.createElement("script");
+vendorElement.src = domain + '/vendor.bundle.js';
+vendorElement.defer = true;
+var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
-    loadPolyBundle();
+var mainElement = document.createElement("script");
+mainElement.src = domain + '/main.bundle.js';
+mainElement.defer = true;
+var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
 
-    function loadPolyBundle() {
-        console.log('getting ployfills bundle');
-        ramidx4.loadScript(domain + '/polyfills.bundle.js', function () {
-            console.log('ployfills bundle loaded');
-            polyDone = true;
-            loadVendorBundle();
-        });
-    }
-
-    function loadVendorBundle() {
-        console.log('getting vendor bundle');
-        ramidx4.loadScript(domain + '/vendor.bundle.js', function () {
-            console.log('vendor bundle loaded');
-            vendorDone = true;
-            loadMain();
-        });
-    }
-
-    function loadMain() {
-        console.log('getting main bundle');
-        if (vendorDone && polyDone) {
-            ramidx4.loadScript(domain + '/main.bundle.js', function () {
-                console.log('main bundle added');
-            });
-        }
-    }
-}
+parentNode.insertBefore(polyElement, document.getElementById("ramidx4_loader"));
+parentNode.insertBefore(vendorElement, document.getElementById("ramidx4_loader"));
+parentNode.insertBefore(mainElement, document.getElementById("ramidx4_loader"));
