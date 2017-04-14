@@ -9,17 +9,17 @@ document.getElementsByTagName('head')[0].appendChild(scriptElement);
 
 var polyElement = document.createElement("script");
 polyElement.src = domain + '/polyfills.bundle.js';
-polyElement.defer = true;
+// polyElement.defer = true;
 var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
 var vendorElement = document.createElement("script");
 vendorElement.src = domain + '/vendor.bundle.js';
-vendorElement.defer = true;
+// vendorElement.defer = true;
 var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
 var mainElement = document.createElement("script");
 mainElement.src = domain + '/main.bundle.js';
-mainElement.defer = true;
+// mainElement.defer = true;
 var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
 
