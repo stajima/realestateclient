@@ -6,6 +6,7 @@ console.log('loader.js')
  */
 ramidx4.loadScript = function (url, callback) {
     var script = document.createElement("script")
+    script.defer = true;
     script.type = "text/javascript";
     if (script.readyState) {  //IE
         script.onreadystatechange = function () {
@@ -30,7 +31,6 @@ ramidx4.loadScript = function (url, callback) {
  */
 ramidx4.loadScript("https://code.jquery.com/jquery-3.2.1.min.js", function () {
     var scriptElement = document.createElement("script");
-    scriptElement.defer = true;
     scriptElement.src = "https://stajima.github.io/realestateclient/temp/appSetup.js";
     var parentNode = document.getElementById("ramidx4_loader").parentNode;
     parentNode.insertBefore(scriptElement, document.getElementById("ramidx4_loader"));
