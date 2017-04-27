@@ -1,6 +1,6 @@
 console.log('loader.js');
 
-(function () {
+(function (window, document) {
     var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
     var jqueryElement = document.createElement("script");
@@ -11,4 +11,4 @@ console.log('loader.js');
     appSetupElement.src = "https://stajima.github.io/realestateclient/temp/appSetup.js";
     parentNode.insertBefore(appSetupElement, document.getElementById("ramidx4_loader"));
 
-})();
+})(window, document);

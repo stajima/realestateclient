@@ -1,6 +1,6 @@
 console.log('appSetup.js');
 
-(function () {
+(function (window, document) {
     var domain = "https://rawgit.com/stajima/ramidx4_app/master/dist/";
     var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
@@ -25,4 +25,4 @@ console.log('appSetup.js');
     parentNode.insertBefore(stylesElement, document.getElementById("ramidx4_loader"));
     parentNode.insertBefore(vendorElement, document.getElementById("ramidx4_loader"));
     parentNode.insertBefore(mainElement, document.getElementById("ramidx4_loader"));
-})();
+})(window, document);
