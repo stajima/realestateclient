@@ -1,23 +1,23 @@
 console.log('appSetup.js');
 
 (function () {
-    var domain = "https://rawgit.com/stajima/ng-admin/master/dist";
+    var domain = "https://rawgit.com/stajima/ramidx4_app/master/dist/";
     var parentNode = document.getElementById("ramidx4_loader").parentNode;
 
     var inlineElement = document.createElement("script");
-    inlineElement.src = domain + '/inline.bundle.js';
+    inlineElement.src = domain + 'inline.bundle.js';
 
     var polyElement = document.createElement("script");
-    polyElement.src = domain + '/polyfills.bundle.js';
+    polyElement.src = domain + 'polyfills.bundle.js';
 
     var stylesElement = document.createElement("script");
-    stylesElement.src = domain + '/styles.bundle.js';
+    stylesElement.src = domain + 'styles.bundle.js';
 
     var vendorElement = document.createElement("script");
-    vendorElement.src = domain + '/vendor.bundle.js';
+    vendorElement.src = domain + 'vendor.bundle.js';
 
     var mainElement = document.createElement("script");
-    mainElement.src = domain + '/main.bundle.js';
+    mainElement.src = domain + 'main.bundle.js';
 
 
     parentNode.insertBefore(inlineElement, document.getElementById("ramidx4_loader"));
