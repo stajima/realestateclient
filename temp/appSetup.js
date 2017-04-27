@@ -1,6 +1,5 @@
-console.log('appSetup.js');
-
 (function () {
+    console.log('appSetup.js');
     var domain = "https://rawgit.com/stajima/ramidx4_app/master/dist/";
     var parentNode = document.getElementById("ramidx4_loader").parentNode;
 

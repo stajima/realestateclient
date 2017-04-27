@@ -1,6 +1,5 @@
-console.log('loader.js')
-
 (function () {
+    console.log('loader.js');
     var jqueryElement = document.createElement("script");
     jqueryElement.src = "https://code.jquery.com/jquery-3.2.1.min.js";
     var parentNode = document.getElementById("ramidx4_loader").parentNode;
