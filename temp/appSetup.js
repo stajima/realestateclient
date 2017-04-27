@@ -2,24 +2,51 @@ console.log('appSetup.js');
 
 var domain = "https://rawgit.com/stajima/ramidx4_app/master/dist/";
 var parentNode = document.getElementById("ramidx4_loader").parentNode;
+var totalScripts = 5;
+var scriptsLoaded = 0;
 
-var inlineElement = document.createElement("script");
-inlineElement.src = domain + 'inline.bundle.js';
 
-var polyElement = document.createElement("script");
-polyElement.src = domain + 'polyfills.bundle.js';
+function loadScript(url, callback) {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    if (script.readyState) {  //IE
+        script.onreadystatechange = function () {
+            if (script.readyState === "loaded" || script.readyState === "complete") {
+                script.onreadystatechange = null;
+                callback();
+            }
+        };
+    } else {  //Others
+        script.onload = function () {
+            callback();
+        };
+    }
+    script.src = url;
+    parentNode.insertBefore(script, document.getElementById("ramidx4_loader"));
+}
 
-var stylesElement = document.createElement("script");
-stylesElement.src = domain + 'styles.bundle.js';
+loadScript(domain + 'inline.bundle.js', function () {
+    scriptsLoaded++;
+    loadMain();
+});
 
-var vendorElement = document.createElement("script");
-vendorElement.src = domain + 'vendor.bundle.js';
+loadScript(domain + 'polyfills.bundle.js', function () {
+    scriptsLoaded++;
+    loadMain();
+});
 
-var mainElement = document.createElement("script");
-mainElement.src = domain + 'main.bundle.js';
+loadScript(domain + 'styles.bundle.js', function () {
+    scriptsLoaded++;
+    loadMain();
+});
 
-parentNode.insertBefore(inlineElement, document.getElementById("ramidx4_loader"));
-parentNode.insertBefore(polyElement, document.getElementById("ramidx4_loader"));
-parentNode.insertBefore(stylesElement, document.getElementById("ramidx4_loader"));
-parentNode.insertBefore(vendorElement, document.getElementById("ramidx4_loader"));
-// parentNode.insertBefore(mainElement, document.getElementById("ramidx4_loader"));
+loadScript(domain + 'vendor.bundle.js', function () {
+    scriptsLoaded++;
+    loadMain();
+});
+
+function loadMain() {
+    if (scriptsLoaded === totalScripts) {
+        loadScript(domain + 'main.bundle.js');
+    }
+}
