@@ -26,27 +26,33 @@ function loadScript(url, callback) {
 }
 
 loadScript(domain + 'inline.bundle.js', function () {
+    console.log('inline done');
     scriptsLoaded++;
     loadMain();
 });
 
 loadScript(domain + 'polyfills.bundle.js', function () {
+    console.log('polyfills done');
     scriptsLoaded++;
     loadMain();
 });
 
 loadScript(domain + 'styles.bundle.js', function () {
+    console.log('styles done');
     scriptsLoaded++;
     loadMain();
 });
 
 loadScript(domain + 'vendor.bundle.js', function () {
+    console.log('vendor done');
     scriptsLoaded++;
     loadMain();
 });
 
 function loadMain() {
     if (scriptsLoaded === totalScripts) {
-        loadScript(domain + 'main.bundle.js');
+        loadScript(domain + 'main.bundle.js', function () {
+            console.log('main done');
+        });
     }
 }
