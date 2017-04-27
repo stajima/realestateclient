@@ -2,7 +2,7 @@ console.log('appSetup.js');
 
 var domain = "https://rawgit.com/stajima/ramidx4_app/master/dist/";
 var parentNode = document.getElementById("ramidx4_loader").parentNode;
-var totalScripts = 5;
+var minorScripts = 4;
 var scriptsLoaded = 0;
 
 
@@ -50,7 +50,7 @@ loadScript(domain + 'vendor.bundle.js', function () {
 });
 
 function loadMain() {
-    if (scriptsLoaded === totalScripts) {
+    if (scriptsLoaded === minorScripts) {
         loadScript(domain + 'main.bundle.js', function () {
             console.log('main done');
         });
